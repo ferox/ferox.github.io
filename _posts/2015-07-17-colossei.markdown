@@ -1,0 +1,13 @@
+---
+title: Colossei
+subtitle: Android
+layout: default
+modal-id: 1
+date: 2015-07-17
+img: Android_Logo.png
+thumbnail: Android_Logo_Thumbnail.png
+alt: image-alt
+project-date: Julho 2015
+category: Desenvolvimento Mobile
+description: Sistema de Gerenciamento de Eventos de Tecnologia.
+---
