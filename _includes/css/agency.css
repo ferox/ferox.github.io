@@ -57,6 +57,13 @@ h6 {
     font-weight: 700;
 }
 
+.logo-responsivo {
+  display: block;
+  max-width: 100%;
+  height: 75px;
+  margin-top:-26px;
+}
+
 .img-centered {
     margin: 0 auto;
 }
