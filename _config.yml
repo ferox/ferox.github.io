@@ -1,15 +1,15 @@
 url: http://127.0.0.1
-baseurl: 
+baseurl:
 
 # Site settings
-title: Fernando dos Santos
+title: Fernando "ferox" dos Santos
 email: fernando@ferox.eti.br
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
   primary: 3c6eb4
-  secondary: 3663a2  
+  secondary: 3663a2
   secondary-dark: 24426c
 
 # Team names, titles and social links
@@ -33,15 +33,15 @@ social:
     url: http://twitter.com/feroxetibr
   - title: facebook
     url: http://facebook.com/feroxetibr
-  - title: bitbucket 
+  - title: bitbucket
     url: http://bitbucket.org/ferox
   - title: github
     url: http://github.com/ferox
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Rua Vento Sul, 409
+  - line: Florianópolis, Santa Catarina
 
 # Build settings
 markdown: kramdown
