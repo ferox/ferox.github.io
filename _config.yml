@@ -29,10 +29,15 @@ people:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
+
+  - title: linkedin
+    url: https://www.linkedin.com/in/ferox
   - title: twitter
-    url: http://twitter.com/feroxetibr
+    url: https://twitter.com/hacker_ferox
   - title: facebook
-    url: http://facebook.com/feroxetibr
+    url: https://facebook.com/hacker.ferox
+  - title: instagram
+    url: https://www.instagram.com/hacker.ferox
   - title: bitbucket
     url: http://bitbucket.org/ferox
   - title: github
