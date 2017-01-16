@@ -3,8 +3,8 @@ baseurl:
 
 # Site settings
 title: Fernando "ferox" dos Santos
-email: fernando@ferox.eti.br
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+email: fernando@ferox.tk
+description: "Hacker. Open Source Specialist. Fedora Ambassador."
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
@@ -45,8 +45,8 @@ social:
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: Rua Vento Sul, 409
-  - line: Florianópolis, Santa Catarina
+  - line: 
+  - line: 
 
 # Build settings
 markdown: kramdown
