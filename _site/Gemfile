@@ -5,4 +5,3 @@ require 'json'
 # versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
 gem 'github-pages', '115', group: :jekyll_plugins
-# gem 'wdm', '>= 0.1.0'
