@@ -1,0 +1,60 @@
+{
+  "website":{
+    "title": "Fernando 'ferox'dos Santos"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Career",
+    "blog": "Blog",
+    "link": "Where Am I now"
+  },
+  "about_me":{
+    "about_me": "About Me",
+    "des1": "I am a Full Stack website developer, an automation Ops and a script writer. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.",
+    "des2": "",
+    "des3": "",
+    "des4": "",
+    "des5": "",
+    "des6": ""
+  },
+  "skills":{
+    "my_skills": "My Skills"
+  },
+  "projects":{
+    "my_projects": "My Projects",
+    "hub": "Hub is a command-line wrapper for git that makes you better at GitHub.",
+    "namebench": "It hunts down the fastest DNS servers available for your computer to use. namebench runs a fair and thorough benchmark using your web browser history, tcpdump output, or standardized datasets in order to provide an individualized recommendation. namebench is completely free and does not modify your system in any way.",
+    "QTivion": "Tivion is a simple streaming player for TV online. It’s a program that I'm developing with Qt, PyQt and the backend of player MPlayer."
+  },
+  "career":{
+    "my_career": "My Career",
+    "company_a": "TREND-e",
+    "company_a_desc": "Now I am the CTO at TREND-e, also developing websites with PHP, Python and Ruby on Rails code for clients.",
+    "company_a_date": "Jul. 2018",
+    "company_a_job": "CTO",
+    "company_b": "Radix - Engeneering & Software",
+    "company_b_desc": "Worked at Radix developing automation software using agile methodology for C#, Node.js and Angular.",
+    "company_b_date": "Aug. 2017",
+    "company_b_job": "C# & Angular Developer",
+    "company_c": "CPF - Brazilian Center for Research in Physics",
+    "company_c_desc": "Worked at CBPF keeping the organization's proprietary and sensitive information secure. Identifying and correcting the flaws at the Center's security systems, providing solutions, and developing software that measures and improves the Center's overall security posture.",
+    "company_c_date": "Jan. 2017",
+    "company_c_job": "Security Analyst",
+    "company_d": "Grupo Fluxum (is a LED's nucleous)",
+    "company_d_desc": "I'm also the CTO at Grupo Fluxum developing company’s strategy for using technological resources for new economy.",
+    "company_d_date": "since Aug. 2016",
+    "company_d_job": "CTO"
+  },
+  "blog":{
+    "my_blog": "My Blog",
+    "no_content": "Sorry, no blog!"
+  },
+  "link":{
+    "link": "Where Am I now",
+    "view": "views"
+  }
+
+}
