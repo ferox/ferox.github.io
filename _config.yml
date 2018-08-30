@@ -1,8 +1,8 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: Ferox
-description: Fernando "ferox" dos Santos.
+title: Fernando "ferox" dos Santos
+description: Hacker, Developer, Open Source specialist, a Fedora Ambassador.
 keywords: Fernando,ferox,blog,linux,kde,dev
 baseurl:   # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url:   # url should be 'http://<github_username>.github.io/homepage' as before

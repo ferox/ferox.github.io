@@ -13,7 +13,7 @@
   },
   "about_me":{
     "about_me": "About Me",
-    "des1": "I am a Full Stack website developer, an automation Ops and a script writer. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.",
+    "des1": "I am a Full Stack website developer, an automation Ops and a script writer. Life is a continuous learning process, work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.",
     "des2": "",
     "des3": "",
     "des4": "",
@@ -39,7 +39,7 @@
     "company_b_desc": "Worked at Radix developing automation software using agile methodology for C#, Node.js and Angular.",
     "company_b_date": "Aug. 2017",
     "company_b_job": "C# & Angular Developer",
-    "company_c": "CPF - Brazilian Center for Research in Physics",
+    "company_c": "CBPF - Brazilian Center for Research in Physics",
     "company_c_desc": "Worked at CBPF keeping the organization's proprietary and sensitive information secure. Identifying and correcting the flaws at the Center's security systems, providing solutions, and developing software that measures and improves the Center's overall security posture.",
     "company_c_date": "Jan. 2017",
     "company_c_job": "Security Analyst",
