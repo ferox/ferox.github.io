@@ -1,11 +1,11 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: hub
-  i18n: hub
+- name: QCorpus
+  i18n: QCorpus
   gh_user: ferox
-  repo: hub
-  img: /static/assets/img/landing/hub-github.png
+  repo: QCorpus
+  img: /static/assets/img/landing/logo-qt.png
   desc:  
 
 - name: namebench

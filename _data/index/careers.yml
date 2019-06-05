@@ -35,7 +35,7 @@
     detail:
     i18n: company_c_desc
   date:
-    detail: Jun. 2015
+    detail:
     i18n: company_c_date
   job:
     detail:
@@ -49,9 +49,37 @@
     detail:
     i18n: company_d_desc
   date:
-    detail: Jun. 2015
+    detail:
     i18n: company_d_date
   job:
     detail:
     i18n: company_d_job
+  icon: fa-plus-square
+
+- name:
+    detail: 
+    i18n: company_e
+  desc:
+    detail:
+    i18n: company_e_desc
+  date:
+    detail:
+    i18n: company_e_date
+  job:
+    detail:
+    i18n: company_e_job
+  icon: fa-plus-square
+
+- name:
+    detail: 
+    i18n: company_f
+  desc:
+    detail:
+    i18n: company_f_desc
+  date:
+    detail:
+    i18n: company_f_date
+  job:
+    detail:
+    i18n: company_f_job
   icon: fa-plus-square
