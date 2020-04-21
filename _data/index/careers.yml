@@ -83,3 +83,31 @@
     detail:
     i18n: company_f_job
   icon: fa-plus-square
+
+- name:
+    detail: 
+    i18n: company_g
+  desc:
+    detail:
+    i18n: company_g_desc
+  date:
+    detail:
+    i18n: company_g_date
+  job:
+    detail:
+    i18n: company_g_job
+  icon: fa-plus-square
+
+- name:
+    detail: 
+    i18n: company_h
+  desc:
+    detail:
+    i18n: company_h_desc
+  date:
+    detail:
+    i18n: company_h_date
+  job:
+    detail:
+    i18n: company_h_job
+  icon: fa-plus-square
