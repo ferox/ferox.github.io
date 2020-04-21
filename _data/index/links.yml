@@ -1,15 +1,21 @@
 # links section data
-- last_name: TREND-e
+- last_name: Life
   first_name:
-  desc: CTO
+  desc: Senior Developer
+  website: http://www.lifecon.com.br/
+  email: fernando.santos@fiocruz.br
+
+- last_name: InfraBrasil
+  first_name:
+  desc: Technical Support Engineer
   website: https://trend-e.tk
-  email: fernando@trend-e.tk
+  email: fernando.santos@infrax.com.br
 
 - last_name: LED/Zeal Box
   first_name: 
   desc: CTO
   website: http://zealbox.tk
-  email: fernando@zealbox.tk
+  email: #
 
 - last_name: Fedora Project
   first_name:

@@ -3,11 +3,11 @@
   <channel>
     <title>Fernando &quot;ferox&quot; dos Santos</title>
     <description>Hacker, Developer, Open Source specialist, a Fedora Ambassador.</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Jun 2019 11:16:04 -0300</pubDate>
-    <lastBuildDate>Wed, 05 Jun 2019 11:16:04 -0300</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 21 Apr 2020 19:42:25 -0300</pubDate>
+    <lastBuildDate>Tue, 21 Apr 2020 19:42:25 -0300</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>3 Steps (2 minutes) to Setup Your Personal Website with Jalpc template</title>
@@ -56,8 +56,8 @@
 &lt;p&gt;If you like this repository, I appreciate you star this repository. Please don’t hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!😊&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Aug 2018 00:00:00 -0300</pubDate>
-        <link>/html/2018/08/29/3-steps-to-setup-website-with-Jalpc.html</link>
-        <guid isPermaLink="true">/html/2018/08/29/3-steps-to-setup-website-with-Jalpc.html</guid>
+        <link>http://localhost:4000/html/2018/08/29/3-steps-to-setup-website-with-Jalpc.html</link>
+        <guid isPermaLink="true">http://localhost:4000/html/2018/08/29/3-steps-to-setup-website-with-Jalpc.html</guid>
         
         <category>Jalpc</category>
         
