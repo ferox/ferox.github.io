@@ -1,6 +1,0 @@
-I"�<h1 id="integrated-terminal-does-not-accept-special-characters-like-á-à-é-í-ú-ü-ã-etc">Integrated terminal does not accept special characters like á, à, é, í, ú, ü, ã, etc</h1>
-
-<p>VS Code has an integrated terminal that runs under the xterm.js. When I start to type many common diacritics and accent marks <a href="https://xtermjs.org/">xterm.js</a> ignores the modifier key. So I can’t use that special character.<br />
-The funny thing is that everything is working as expected with Yakuake (Plasma/KDE) and PHPStorm’s terminal.<br />
-<a href="https://github.com/microsoft/vscode/issues/108032">Take a look at this opened issue</a></p>
-:ET
