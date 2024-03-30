@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gemspec
 
 group :jekyll_plugins do
-  gem 'jekyll-seo-tag'
-  gem 'jekyll-multiple-languages-plugin'
+  gem "jekyll-seo-tag"
 end
 
+gem "jekyll-multiple-languages-plugin"
