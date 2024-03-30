@@ -1,5 +1,5 @@
 ---
-title: /contact
+title: /home/ferox/contact
 layout: page
 permalink: /contact
 ---

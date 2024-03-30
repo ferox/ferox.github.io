@@ -1,7 +1,7 @@
 ---
 title: /home/ferox
 layout: page
-permalink: /home/ferox
+permalink: /ferox
 ---
 
 # Fernando "ferox" dos Santos

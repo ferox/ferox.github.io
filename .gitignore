@@ -1,6 +1,10 @@
+# Jekyll config files
 *.gem
 .bundle
 .sass-cache
 _site
 .jekyll-cache
 Gemfile.lock
+
+# JetBrains config files
+.idea

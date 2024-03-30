@@ -13,6 +13,6 @@ The funny thing is that everything is working as expected with Yakuake (Plasma/K
 <br>
 Update [2022/04/21]
 Seems that the bug was fixed on the 1.66.2 version.
-Tested distros: Kubuntu (20.04), Fedora 34 (Spin Plamas)
+Tested distros: Kubuntu (20.04), Fedora 34 (Plasma Spin)
 <br>
 That's great!
