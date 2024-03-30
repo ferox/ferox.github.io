@@ -1,3 +1,7 @@
 <footer>
+  {% if site.lang == "pt-br" %}
+  {{ site.footer_pt-br }}
+  {% else %}
   {{ site.footer }}
+  {% endif %}
 </footer>
