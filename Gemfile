@@ -1,10 +1,8 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
-gemspec
 
 group :jekyll_plugins do
-  gem "jekyll-seo-tag"
+  gem 'jekyll-seo-tag'
+  gem 'github-pages'
+  gem 'faraday-retry'
+  gem 'jekyll-multiple-languages-plugin'
 end
-
-gem "jekyll-multiple-languages-plugin"
