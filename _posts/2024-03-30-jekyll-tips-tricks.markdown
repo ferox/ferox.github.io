@@ -18,7 +18,7 @@ $ sudo dnf install perl-core zlib-devel
 Check it out the [dependency versions page](https://pages.github.com/versions)
 
 
-## You may found some errors running jekyll serve locally after some changes on your Gemfile. Messages like this: You have already activated...Consider using bundle exec.
+## You may find some errors running jekyll serve locally after some changes on your Gemfile. Messages like this: You have already activated...Consider using bundle exec.
 You'll have to try some of those commands:
 ```shell
 $ bundle clean --force
