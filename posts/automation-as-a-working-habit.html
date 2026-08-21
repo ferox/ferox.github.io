@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="mzp-has-sticky-navigation">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ferox - Automation as a working habit</title>
+
+
+<link rel="canonical" href="https://ferox.eti.br/posts/automation-as-a-working-habit">
+<meta name="description" content="Why I keep writing scripts, where automation pays off most, and how I think about reducing operational friction without creating new complexity.">
+<meta name="twitter:title" content="ferox - Automation as a working habit">
+<meta name="author" content="Ferox">
+<meta name="keywords" content="Automation">
+<meta name="url" content="https://ferox.eti.br/posts/automation-as-a-working-habit">
+<meta property="og:description" content="Why I keep writing scripts, where automation pays off most, and how I think about reducing operational friction without creating new complexity.">
+<meta property="og:title" content="ferox - Automation as a working habit">
+<meta property="og:url" content="https://ferox.eti.br/posts/automation-as-a-working-habit">
+<meta property="og:article:published_time" content="2026-08-08T00:00:00+00:00">
+<meta property="og:type" content="article">
+
+
+<link rel="sitemap" href="https://ferox.eti.br/sitemap.xml" type="application/xml" title="Sitemap">
+<link rel="alternate" href="https://ferox.eti.br/feed.xml" type="application/rss+xml" title="ferox blog feed">
+<meta name="generator" content="HydePHP v2.0.3">
+<meta property="og:site_name" content="ferox">
+
+
+<style>[x-cloak] {display: none!important}</style>
+
+
+            <link rel="stylesheet" href="https://ferox.eti.br/media/app.css?v=bfa0adbf">
+    
+
+    
+    
+
+
+
+
+
+</head>
+<body id="top">
+    <a href="#content" id="skip-to-content" class="site-skip-link">Skip to content</a>
+
+    <div class="site-shell">
+        <nav aria-label="Main navigation" class="mzp-c-navigation mzp-is-sticky site-nav">
+    <div class="mzp-c-navigation-l-content">
+        <div class="mzp-c-navigation-container">
+            <div class="mzp-c-navigation-logo site-nav__brand">
+                <a href="https://ferox.eti.br" aria-label="ferox home">
+                    ferox
+                </a>
+            </div>
+
+            <button
+                type="button"
+                class="mzp-c-navigation-menu-button has-label"
+                data-site-menu-toggle
+                aria-controls="site-navigation-links"
+                aria-expanded="false"
+            >
+                Menu
+            </button>
+
+            <div class="mzp-c-navigation-items" id="site-navigation-links" data-site-menu>
+                <div class="site-nav__menu">
+                                            <a
+                            href="https://ferox.eti.br"
+                            class="site-nav__link"
+                        >
+                            Home
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/about"
+                            class="site-nav__link"
+                        >
+                            About
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/blog"
+                            class="site-nav__link"
+                        >
+                            Blog
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/contact"
+                            class="site-nav__link"
+                        >
+                            Contact
+                        </a>
+                    
+                    <a href="https://ferox.eti.br/feed.xml" class="site-nav__link site-nav__link--subtle">RSS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+    <main id="content" class="site-page">
+        <section class="site-page-section site-page-section--article">
+            <div class="mzp-l-content mzp-t-content-md site-article-shell">
+                <article
+    id="2026-08-08-automation-as-a-working-habit"
+    class="site-post"
+    itemscope
+    itemtype="https://schema.org/BlogPosting"
+    aria-label="Article"
+>
+    <meta itemprop="identifier" content="2026-08-08-automation-as-a-working-habit">
+            <meta itemprop="url" content="https://ferox.eti.br/posts/automation-as-a-working-habit">
+    
+    <header class="site-post__header" aria-label="Header section" role="doc-pageheader">
+                    <p class="site-post__kicker">Automation</p>
+        
+        <h1 itemprop="headline" class="mzp-u-title-xl">Automation as a working habit</h1>
+
+                    <p class="mzp-u-body-lg site-post__description">Why I keep writing scripts, where automation pays off most, and how I think about reducing operational friction without creating new complexity.</p>
+        
+        <div class="site-post__meta" aria-label="About the post" role="doc-introduction">
+            <span>
+    <time itemprop="dateCreated datePublished" datetime="2026-08-08T00:00:00+00:00" title="Saturday Aug 8th, 2026, at 12:00am">
+        Aug 8th, 2026
+    </time>
+</span>
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span>By </span>
+            <a href="https://ferox.eti.br" rel="author" itemprop="url">
+            <span itemprop="name">Ferox</span>
+        </a>
+    </span>
+            <span>Filed under Automation</span>
+        </div>
+    </header>
+
+    <div class="site-prose" aria-label="Article body" itemprop="articleBody">
+        <p>Automation is not a separate interest from development for me. It is part of how I work.</p>
+<p>If I notice the same task repeating often enough, I start asking a simple question: should a person really be doing this by hand every time?</p>
+<p>Sometimes the answer is yes. Usually the answer is no.</p>
+<h2>What good automation does</h2>
+<p>The best scripts are rarely glamorous. They do not need a product name or a launch post. They just remove friction.</p>
+<p>That can mean:</p>
+<ul>
+<li>preparing environments</li>
+<li>transforming data</li>
+<li>standardizing repetitive maintenance work</li>
+<li>reducing the number of manual steps in deployment or content workflows</li>
+</ul>
+<p>The value is not only speed. The value is consistency.</p>
+<h2>Small scripts, real gains</h2>
+<p>I have always liked script writing because it sits in the right place between immediate usefulness and long-term leverage.</p>
+<p>A small script can:</p>
+<ul>
+<li>prevent mistakes</li>
+<li>save hours over time</li>
+<li>document the right way to do a task</li>
+<li>make operational work less fragile</li>
+</ul>
+<p>That is a good trade.</p>
+<h2>Automation should reduce complexity</h2>
+<p>There is a trap here, of course. It is easy to automate something badly and end up with a worse system than the manual version.</p>
+<p>So my rule is simple:</p>
+<p>automation should make the work easier to understand, not harder.</p>
+<p>If the script becomes opaque, brittle, or impossible to hand over, then it is probably solving the wrong problem in the wrong way.</p>
+<p>The goal is not to automate for its own sake. The goal is to leave behind a process that is clearer, faster, and less annoying than before.</p>
+
+    </div>
+</article>
+            </div>
+        </section>
+    </main>
+
+
+        <footer class="site-footer" aria-label="Page footer">
+    <div class="mzp-l-content site-footer__inner">
+        <div class="site-footer__grid">
+            <div>
+                <p class="site-footer__label">ferox.eti.br</p>
+                <p class="site-footer__copy">
+                    Fernando Santos. Full Stack development and life on the open web.
+                </p>
+            </div>
+            <div class="site-footer__links">
+                <a href="https://ferox.eti.br/about">About</a>
+                <a href="https://ferox.eti.br/blog">Blog</a>
+                <a href="https://ferox.eti.br/contact">Contact</a>
+                <a href="https://ferox.eti.br/feed.xml">RSS</a>
+                <a href="https://github.com/ferox">GitHub</a>
+                <a href="https://www.linkedin.com/in/ferox">LinkedIn</a>
+                <a href="https://mastodon.pirateparty.be/@ferox">Mastodon</a>
+            </div>
+        </div>
+        <p class="site-footer__legal">
+            &copy; 2026 Ferox. Built with <a href="https://github.com/hydephp/hyde">HydePHP</a>.
+        </p>
+    </div>
+</footer>
+    </div>
+
+    <script type="module" defer src="https://ferox.eti.br/media/app.js?v=fb7aafc5"></script>
+
+
+
+
+</body>
+</html>

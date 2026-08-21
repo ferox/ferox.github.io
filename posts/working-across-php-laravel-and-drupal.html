@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="mzp-has-sticky-navigation">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ferox - Working across PHP, Laravel, and Drupal</title>
+
+
+<link rel="canonical" href="https://ferox.eti.br/posts/working-across-php-laravel-and-drupal">
+<meta name="description" content="The stack I keep returning to, why it still works for me, and how I think about moving between product code, CMS work, and custom applications.">
+<meta name="twitter:title" content="ferox - Working across PHP, Laravel, and Drupal">
+<meta name="author" content="Ferox">
+<meta name="keywords" content="Development">
+<meta name="url" content="https://ferox.eti.br/posts/working-across-php-laravel-and-drupal">
+<meta property="og:description" content="The stack I keep returning to, why it still works for me, and how I think about moving between product code, CMS work, and custom applications.">
+<meta property="og:title" content="ferox - Working across PHP, Laravel, and Drupal">
+<meta property="og:url" content="https://ferox.eti.br/posts/working-across-php-laravel-and-drupal">
+<meta property="og:article:published_time" content="2026-08-13T00:00:00+00:00">
+<meta property="og:type" content="article">
+
+
+<link rel="sitemap" href="https://ferox.eti.br/sitemap.xml" type="application/xml" title="Sitemap">
+<link rel="alternate" href="https://ferox.eti.br/feed.xml" type="application/rss+xml" title="ferox blog feed">
+<meta name="generator" content="HydePHP v2.0.3">
+<meta property="og:site_name" content="ferox">
+
+
+<style>[x-cloak] {display: none!important}</style>
+
+
+            <link rel="stylesheet" href="https://ferox.eti.br/media/app.css?v=bfa0adbf">
+    
+
+    
+    
+
+
+
+
+
+</head>
+<body id="top">
+    <a href="#content" id="skip-to-content" class="site-skip-link">Skip to content</a>
+
+    <div class="site-shell">
+        <nav aria-label="Main navigation" class="mzp-c-navigation mzp-is-sticky site-nav">
+    <div class="mzp-c-navigation-l-content">
+        <div class="mzp-c-navigation-container">
+            <div class="mzp-c-navigation-logo site-nav__brand">
+                <a href="https://ferox.eti.br" aria-label="ferox home">
+                    ferox
+                </a>
+            </div>
+
+            <button
+                type="button"
+                class="mzp-c-navigation-menu-button has-label"
+                data-site-menu-toggle
+                aria-controls="site-navigation-links"
+                aria-expanded="false"
+            >
+                Menu
+            </button>
+
+            <div class="mzp-c-navigation-items" id="site-navigation-links" data-site-menu>
+                <div class="site-nav__menu">
+                                            <a
+                            href="https://ferox.eti.br"
+                            class="site-nav__link"
+                        >
+                            Home
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/about"
+                            class="site-nav__link"
+                        >
+                            About
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/blog"
+                            class="site-nav__link"
+                        >
+                            Blog
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/contact"
+                            class="site-nav__link"
+                        >
+                            Contact
+                        </a>
+                    
+                    <a href="https://ferox.eti.br/feed.xml" class="site-nav__link site-nav__link--subtle">RSS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+    <main id="content" class="site-page">
+        <section class="site-page-section site-page-section--article">
+            <div class="mzp-l-content mzp-t-content-md site-article-shell">
+                <article
+    id="2026-08-13-working-across-php-laravel-and-drupal"
+    class="site-post"
+    itemscope
+    itemtype="https://schema.org/BlogPosting"
+    aria-label="Article"
+>
+    <meta itemprop="identifier" content="2026-08-13-working-across-php-laravel-and-drupal">
+            <meta itemprop="url" content="https://ferox.eti.br/posts/working-across-php-laravel-and-drupal">
+    
+    <header class="site-post__header" aria-label="Header section" role="doc-pageheader">
+                    <p class="site-post__kicker">Development</p>
+        
+        <h1 itemprop="headline" class="mzp-u-title-xl">Working across PHP, Laravel, and Drupal</h1>
+
+                    <p class="mzp-u-body-lg site-post__description">The stack I keep returning to, why it still works for me, and how I think about moving between product code, CMS work, and custom applications.</p>
+        
+        <div class="site-post__meta" aria-label="About the post" role="doc-introduction">
+            <span>
+    <time itemprop="dateCreated datePublished" datetime="2026-08-13T00:00:00+00:00" title="Thursday Aug 13th, 2026, at 12:00am">
+        Aug 13th, 2026
+    </time>
+</span>
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span>By </span>
+            <a href="https://ferox.eti.br" rel="author" itemprop="url">
+            <span itemprop="name">Ferox</span>
+        </a>
+    </span>
+            <span>Filed under Development</span>
+        </div>
+    </header>
+
+    <div class="site-prose" aria-label="Article body" itemprop="articleBody">
+        <p>Most of my work keeps circling back to the same core tools: <strong>PHP</strong>, <strong>Laravel</strong>, and <strong>Drupal</strong>.</p>
+<p>That is not because I am trying to stay inside a comfort zone. It is because these tools continue to solve real problems in a way that is practical, inspectable, and easy to maintain when the project stops being new.</p>
+<h2>Why this stack still makes sense</h2>
+<p>I like working with tools that let me move between different kinds of delivery without changing my whole way of thinking.</p>
+<p>With this stack I can work on:</p>
+<ul>
+<li>custom application development</li>
+<li>content-heavy websites</li>
+<li>integrations and maintenance work</li>
+<li>internal systems that need to stay stable for a long time</li>
+</ul>
+<p>Laravel gives me a modern application workflow. Drupal gives me structure when the project is content-first, editorial, or highly modeled. PHP gives me a foundation that is still extremely productive when the goal is to ship useful software.</p>
+<h2>Switching contexts without losing clarity</h2>
+<p>One thing I value is being able to move between stacks without pretending they all solve the same problem.</p>
+<p>Laravel is where I want expressive application code, tight feedback loops, and clean service boundaries.</p>
+<p>Drupal is where I want:</p>
+<ul>
+<li>strong content modeling</li>
+<li>admin workflows</li>
+<li>mature editorial tooling</li>
+<li>a system that can handle complex information architecture</li>
+</ul>
+<p>The useful skill is not choosing one tool and defending it forever. The useful skill is understanding where each tool fits and how to keep the solution coherent.</p>
+<h2>The part that matters most</h2>
+<p>I do not think of “Full Stack” as a slogan. For me it means being able to follow a problem from interface to backend to deployment details and still keep the whole thing understandable.</p>
+<p>That is why I keep returning to this ecosystem. It lets me do real work without turning every project into a research lab.</p>
+
+    </div>
+</article>
+            </div>
+        </section>
+    </main>
+
+
+        <footer class="site-footer" aria-label="Page footer">
+    <div class="mzp-l-content site-footer__inner">
+        <div class="site-footer__grid">
+            <div>
+                <p class="site-footer__label">ferox.eti.br</p>
+                <p class="site-footer__copy">
+                    Fernando Santos. Full Stack development and life on the open web.
+                </p>
+            </div>
+            <div class="site-footer__links">
+                <a href="https://ferox.eti.br/about">About</a>
+                <a href="https://ferox.eti.br/blog">Blog</a>
+                <a href="https://ferox.eti.br/contact">Contact</a>
+                <a href="https://ferox.eti.br/feed.xml">RSS</a>
+                <a href="https://github.com/ferox">GitHub</a>
+                <a href="https://www.linkedin.com/in/ferox">LinkedIn</a>
+                <a href="https://mastodon.pirateparty.be/@ferox">Mastodon</a>
+            </div>
+        </div>
+        <p class="site-footer__legal">
+            &copy; 2026 Ferox. Built with <a href="https://github.com/hydephp/hyde">HydePHP</a>.
+        </p>
+    </div>
+</footer>
+    </div>
+
+    <script type="module" defer src="https://ferox.eti.br/media/app.js?v=fb7aafc5"></script>
+
+
+
+
+</body>
+</html>

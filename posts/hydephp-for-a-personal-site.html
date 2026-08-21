@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="mzp-has-sticky-navigation">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ferox - HydePHP fits the way I like to publish</title>
+
+
+<link rel="canonical" href="https://ferox.eti.br/posts/hydephp-for-a-personal-site">
+<meta name="description" content="Why HydePHP is a pragmatic middle ground between a handwritten static site and a heavier application stack.">
+<meta name="twitter:title" content="ferox - HydePHP fits the way I like to publish">
+<meta name="author" content="Ferox">
+<meta name="keywords" content="Tech">
+<meta name="url" content="https://ferox.eti.br/posts/hydephp-for-a-personal-site">
+<meta property="og:description" content="Why HydePHP is a pragmatic middle ground between a handwritten static site and a heavier application stack.">
+<meta property="og:title" content="ferox - HydePHP fits the way I like to publish">
+<meta property="og:url" content="https://ferox.eti.br/posts/hydephp-for-a-personal-site">
+<meta property="og:article:published_time" content="2026-08-01T00:00:00+00:00">
+<meta property="og:type" content="article">
+
+
+<link rel="sitemap" href="https://ferox.eti.br/sitemap.xml" type="application/xml" title="Sitemap">
+<link rel="alternate" href="https://ferox.eti.br/feed.xml" type="application/rss+xml" title="ferox blog and notes feed">
+<meta name="generator" content="HydePHP v2.0.3">
+<meta property="og:site_name" content="ferox">
+
+
+<style>[x-cloak] {display: none!important}</style>
+
+
+            <link rel="stylesheet" href="https://ferox.eti.br/media/app.css?v=6b140c11">
+    
+
+    
+    
+
+
+
+
+
+</head>
+<body id="top">
+    <a href="#content" id="skip-to-content" class="site-skip-link">Skip to content</a>
+
+    <div class="site-shell">
+        <nav aria-label="Main navigation" class="mzp-c-navigation mzp-is-sticky site-nav">
+    <div class="mzp-c-navigation-l-content">
+        <div class="mzp-c-navigation-container">
+            <div class="mzp-c-navigation-logo site-nav__brand">
+                <a href="../" aria-label="ferox home">
+                    ferox
+                </a>
+            </div>
+
+            <button
+                type="button"
+                class="mzp-c-navigation-menu-button has-label"
+                data-site-menu-toggle
+                aria-controls="site-navigation-links"
+                aria-expanded="false"
+            >
+                Menu
+            </button>
+
+            <div class="mzp-c-navigation-items" id="site-navigation-links" data-site-menu>
+                <div class="site-nav__menu">
+                                                                        <a
+                                href="../"
+                                class="site-nav__link"
+                            >
+                                Home
+                            </a>
+                                                                                                <a
+                                href="../about"
+                                class="site-nav__link"
+                            >
+                                About
+                            </a>
+                                                                                                <a
+                                href="../blog"
+                                class="site-nav__link"
+                            >
+                                Blog
+                            </a>
+                                                                                                <a
+                                href="../contact"
+                                class="site-nav__link"
+                            >
+                                Contact
+                            </a>
+                                            
+                    <a href="../feed.xml" class="site-nav__link site-nav__link--subtle">RSS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+    <main id="content">
+        <section class="mzp-l-content mzp-t-content-md site-article-shell">
+            <article
+    id="hydephp-for-a-personal-site"
+    class="site-post"
+    itemscope
+    itemtype="https://schema.org/BlogPosting"
+    aria-label="Article"
+>
+    <meta itemprop="identifier" content="hydephp-for-a-personal-site">
+            <meta itemprop="url" content="https://ferox.eti.br/posts/hydephp-for-a-personal-site">
+    
+    <header class="site-post__header" aria-label="Header section" role="doc-pageheader">
+                    <p class="site-post__kicker">Tech</p>
+        
+        <h1 itemprop="headline" class="mzp-u-title-xl">HydePHP fits the way I like to publish</h1>
+
+                    <p class="mzp-u-body-lg site-post__description">Why HydePHP is a pragmatic middle ground between a handwritten static site and a heavier application stack.</p>
+        
+        <div class="site-post__meta" aria-label="About the post" role="doc-introduction">
+            <span>
+    <time itemprop="dateCreated datePublished" datetime="2026-08-01T00:00:00+00:00" title="Saturday Aug 1st, 2026, at 12:00am">
+        Aug 1st, 2026
+    </time>
+</span>
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span>By </span>
+            <a href="https://ferox.eti.br" rel="author" itemprop="url">
+            <span itemprop="name">Ferox</span>
+        </a>
+    </span>
+            <span>Filed under Tech</span>
+        </div>
+    </header>
+
+    <div class="site-prose" aria-label="Article body" itemprop="articleBody">
+        <p>HydePHP sits in a useful spot for me.</p>
+<p>It keeps the output static, but it does not force every page into the same content model. That matters for a personal site because the homepage, archive, and article pages usually need different levels of control.</p>
+<h2>The tradeoff is good</h2>
+<p>With HydePHP, I can use:</p>
+<ul>
+<li>Markdown for normal posts</li>
+<li>Blade for pages that need custom structure</li>
+<li>PHP-native configuration for routing, metadata, and navigation</li>
+</ul>
+<p>That gives me more leverage than a pure Markdown stack, without pushing the site into the complexity of a full dynamic application.</p>
+<h2>Good defaults, replaceable layers</h2>
+<p>The other advantage is that Hyde does not trap you in its defaults. You can override the views, adjust the build pipeline, and keep the project understandable.</p>
+<p>That is exactly what a personal site should optimize for.</p>
+
+    </div>
+</article>
+        </section>
+    </main>
+
+
+        <footer class="site-footer" aria-label="Page footer">
+    <div class="mzp-l-content site-footer__inner">
+        <div class="site-footer__grid">
+            <div>
+                <p class="site-footer__label">ferox.eti.br</p>
+                <p class="site-footer__copy">
+                    Fernando "ferox" dos Santos. Full Stack development, automation, FLOSS, and life on the open web.
+                </p>
+            </div>
+            <div class="site-footer__links">
+                <a href="../about">About</a>
+                <a href="../blog">Blog</a>
+                <a href="../contact">Contact</a>
+                <a href="../feed.xml">RSS</a>
+                <a href="https://github.com/ferox">GitHub</a>
+                <a href="https://www.linkedin.com/in/ferox">LinkedIn</a>
+                <a href="https://mastodon.pirateparty.be/@ferox">Mastodon</a>
+            </div>
+        </div>
+        <p class="site-footer__legal">
+            &copy; 2026 Ferox. Built with <a href="https://github.com/hydephp/hyde">HydePHP</a>.
+        </p>
+    </div>
+</footer>
+    </div>
+
+    <script type="module" defer src="https://ferox.eti.br/media/app.js?v=fb7aafc5"></script>
+
+
+
+
+</body>
+</html>

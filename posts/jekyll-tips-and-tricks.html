@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="mzp-has-sticky-navigation">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ferox - Jekyll tips and tricks</title>
+
+
+<link rel="canonical" href="https://ferox.eti.br/posts/jekyll-tips-and-tricks">
+<meta name="description" content="Tips and tricks to work with Jekyll, from Fedora setup to dependency and bundle issues.">
+<meta name="twitter:title" content="ferox - Jekyll tips and tricks">
+<meta name="author" content="Ferox">
+<meta name="keywords" content="Jekyll">
+<meta name="url" content="https://ferox.eti.br/posts/jekyll-tips-and-tricks">
+<meta property="og:description" content="Tips and tricks to work with Jekyll, from Fedora setup to dependency and bundle issues.">
+<meta property="og:title" content="ferox - Jekyll tips and tricks">
+<meta property="og:url" content="https://ferox.eti.br/posts/jekyll-tips-and-tricks">
+<meta property="og:article:published_time" content="2024-03-30T07:32:45+00:00">
+<meta property="og:type" content="article">
+
+
+<link rel="sitemap" href="https://ferox.eti.br/sitemap.xml" type="application/xml" title="Sitemap">
+<link rel="alternate" href="https://ferox.eti.br/feed.xml" type="application/rss+xml" title="ferox blog feed">
+<meta name="generator" content="HydePHP v2.0.3">
+<meta property="og:site_name" content="ferox">
+
+
+<style>[x-cloak] {display: none!important}</style>
+
+
+            <link rel="stylesheet" href="https://ferox.eti.br/media/app.css?v=bfa0adbf">
+    
+
+    
+    
+
+
+
+
+
+</head>
+<body id="top">
+    <a href="#content" id="skip-to-content" class="site-skip-link">Skip to content</a>
+
+    <div class="site-shell">
+        <nav aria-label="Main navigation" class="mzp-c-navigation mzp-is-sticky site-nav">
+    <div class="mzp-c-navigation-l-content">
+        <div class="mzp-c-navigation-container">
+            <div class="mzp-c-navigation-logo site-nav__brand">
+                <a href="https://ferox.eti.br" aria-label="ferox home">
+                    ferox
+                </a>
+            </div>
+
+            <button
+                type="button"
+                class="mzp-c-navigation-menu-button has-label"
+                data-site-menu-toggle
+                aria-controls="site-navigation-links"
+                aria-expanded="false"
+            >
+                Menu
+            </button>
+
+            <div class="mzp-c-navigation-items" id="site-navigation-links" data-site-menu>
+                <div class="site-nav__menu">
+                                            <a
+                            href="https://ferox.eti.br"
+                            class="site-nav__link"
+                        >
+                            Home
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/about"
+                            class="site-nav__link"
+                        >
+                            About
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/blog"
+                            class="site-nav__link"
+                        >
+                            Blog
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/contact"
+                            class="site-nav__link"
+                        >
+                            Contact
+                        </a>
+                    
+                    <a href="https://ferox.eti.br/feed.xml" class="site-nav__link site-nav__link--subtle">RSS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+    <main id="content" class="site-page">
+        <section class="site-page-section site-page-section--article">
+            <div class="mzp-l-content mzp-t-content-md site-article-shell">
+                <article
+    id="2024-03-30-jekyll-tips-and-tricks"
+    class="site-post"
+    itemscope
+    itemtype="https://schema.org/BlogPosting"
+    aria-label="Article"
+>
+    <meta itemprop="identifier" content="2024-03-30-jekyll-tips-and-tricks">
+            <meta itemprop="url" content="https://ferox.eti.br/posts/jekyll-tips-and-tricks">
+    
+    <header class="site-post__header" aria-label="Header section" role="doc-pageheader">
+                    <p class="site-post__kicker">Jekyll</p>
+        
+        <h1 itemprop="headline" class="mzp-u-title-xl">Jekyll tips and tricks</h1>
+
+                    <p class="mzp-u-body-lg site-post__description">Tips and tricks to work with Jekyll, from Fedora setup to dependency and bundle issues.</p>
+        
+        <div class="site-post__meta" aria-label="About the post" role="doc-introduction">
+            <span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-30T07:32:45+00:00" title="Saturday Mar 30th, 2024, at 7:32am">
+        Mar 30th, 2024
+    </time>
+</span>
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span>By </span>
+            <a href="https://ferox.eti.br" rel="author" itemprop="url">
+            <span itemprop="name">Ferox</span>
+        </a>
+    </span>
+            <span>Filed under Jekyll</span>
+        </div>
+    </header>
+
+    <div class="site-prose" aria-label="Article body" itemprop="articleBody">
+        <h2>Installing Jekyll on Fedora with rbenv</h2>
+<p>Before installing <code>rbenv</code>, make sure the development toolchain is present on the system:</p>
+<pre><code class="language-bash">sudo dnf groupinstall &quot;Development Tools&quot;
+sudo dnf install perl-core zlib-devel
+</code></pre>
+<h2>Check GitHub Pages dependency support</h2>
+<p>If you deploy a Jekyll site on GitHub Pages, always confirm which versions are supported before upgrading gems or changing configuration.</p>
+<p>See the <a href="https://pages.github.com/versions">GitHub Pages dependency versions page</a>.</p>
+<h2>Fixing local <code>jekyll serve</code> bundle issues</h2>
+<p>After changing the <code>Gemfile</code>, local runs can break with messages like:</p>
+<blockquote>
+<p>You have already activated... Consider using bundle exec.</p>
+</blockquote>
+<p>When that happens, these commands usually help:</p>
+<pre><code class="language-bash">bundle clean --force
+bundle update
+bundle install # remove Gemfile.lock before this step
+</code></pre>
+
+    </div>
+</article>
+            </div>
+        </section>
+    </main>
+
+
+        <footer class="site-footer" aria-label="Page footer">
+    <div class="mzp-l-content site-footer__inner">
+        <div class="site-footer__grid">
+            <div>
+                <p class="site-footer__label">ferox.eti.br</p>
+                <p class="site-footer__copy">
+                    Fernando Santos. Full Stack development and life on the open web.
+                </p>
+            </div>
+            <div class="site-footer__links">
+                <a href="https://ferox.eti.br/about">About</a>
+                <a href="https://ferox.eti.br/blog">Blog</a>
+                <a href="https://ferox.eti.br/contact">Contact</a>
+                <a href="https://ferox.eti.br/feed.xml">RSS</a>
+                <a href="https://github.com/ferox">GitHub</a>
+                <a href="https://www.linkedin.com/in/ferox">LinkedIn</a>
+                <a href="https://mastodon.pirateparty.be/@ferox">Mastodon</a>
+            </div>
+        </div>
+        <p class="site-footer__legal">
+            &copy; 2026 Ferox. Built with <a href="https://github.com/hydephp/hyde">HydePHP</a>.
+        </p>
+    </div>
+</footer>
+    </div>
+
+    <script type="module" defer src="https://ferox.eti.br/media/app.js?v=fb7aafc5"></script>
+
+
+
+
+</body>
+</html>

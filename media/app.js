@@ -1,0 +1,1 @@
+document.documentElement.classList.add("js");document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector("[data-site-menu-toggle]"),t=document.querySelector("[data-site-menu]");!e||!t||e.addEventListener("click",()=>{const n=t.classList.toggle("mzp-is-open");e.setAttribute("aria-expanded",n?"true":"false"),e.classList.toggle("mzp-is-active",n)})});
