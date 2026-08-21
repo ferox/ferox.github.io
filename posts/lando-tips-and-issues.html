@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="mzp-has-sticky-navigation">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ferox - Lando tips and issues</title>
+
+
+<link rel="canonical" href="https://ferox.eti.br/posts/lando-tips-and-issues">
+<meta name="description" content="Lando tips and issues, including Traefik recovery steps and Xdebug setup for PHP development.">
+<meta name="twitter:title" content="ferox - Lando tips and issues">
+<meta name="author" content="Ferox">
+<meta name="keywords" content="Lando">
+<meta name="url" content="https://ferox.eti.br/posts/lando-tips-and-issues">
+<meta property="og:description" content="Lando tips and issues, including Traefik recovery steps and Xdebug setup for PHP development.">
+<meta property="og:title" content="ferox - Lando tips and issues">
+<meta property="og:url" content="https://ferox.eti.br/posts/lando-tips-and-issues">
+<meta property="og:article:published_time" content="2024-03-30T09:32:45+00:00">
+<meta property="og:type" content="article">
+
+
+<link rel="sitemap" href="https://ferox.eti.br/sitemap.xml" type="application/xml" title="Sitemap">
+<link rel="alternate" href="https://ferox.eti.br/feed.xml" type="application/rss+xml" title="ferox blog feed">
+<meta name="generator" content="HydePHP v2.0.3">
+<meta property="og:site_name" content="ferox">
+
+
+<style>[x-cloak] {display: none!important}</style>
+
+
+            <link rel="stylesheet" href="https://ferox.eti.br/media/app.css?v=bfa0adbf">
+    
+
+    
+    
+
+
+
+
+
+</head>
+<body id="top">
+    <a href="#content" id="skip-to-content" class="site-skip-link">Skip to content</a>
+
+    <div class="site-shell">
+        <nav aria-label="Main navigation" class="mzp-c-navigation mzp-is-sticky site-nav">
+    <div class="mzp-c-navigation-l-content">
+        <div class="mzp-c-navigation-container">
+            <div class="mzp-c-navigation-logo site-nav__brand">
+                <a href="https://ferox.eti.br" aria-label="ferox home">
+                    ferox
+                </a>
+            </div>
+
+            <button
+                type="button"
+                class="mzp-c-navigation-menu-button has-label"
+                data-site-menu-toggle
+                aria-controls="site-navigation-links"
+                aria-expanded="false"
+            >
+                Menu
+            </button>
+
+            <div class="mzp-c-navigation-items" id="site-navigation-links" data-site-menu>
+                <div class="site-nav__menu">
+                                            <a
+                            href="https://ferox.eti.br"
+                            class="site-nav__link"
+                        >
+                            Home
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/about"
+                            class="site-nav__link"
+                        >
+                            About
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/blog"
+                            class="site-nav__link"
+                        >
+                            Blog
+                        </a>
+                                            <a
+                            href="https://ferox.eti.br/contact"
+                            class="site-nav__link"
+                        >
+                            Contact
+                        </a>
+                    
+                    <a href="https://ferox.eti.br/feed.xml" class="site-nav__link site-nav__link--subtle">RSS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+        
+    <main id="content" class="site-page">
+        <section class="site-page-section site-page-section--article">
+            <div class="mzp-l-content mzp-t-content-md site-article-shell">
+                <article
+    id="2024-03-30-lando-tips-and-issues"
+    class="site-post"
+    itemscope
+    itemtype="https://schema.org/BlogPosting"
+    aria-label="Article"
+>
+    <meta itemprop="identifier" content="2024-03-30-lando-tips-and-issues">
+            <meta itemprop="url" content="https://ferox.eti.br/posts/lando-tips-and-issues">
+    
+    <header class="site-post__header" aria-label="Header section" role="doc-pageheader">
+                    <p class="site-post__kicker">Lando</p>
+        
+        <h1 itemprop="headline" class="mzp-u-title-xl">Lando tips and issues</h1>
+
+                    <p class="mzp-u-body-lg site-post__description">Lando tips and issues, including Traefik recovery steps and Xdebug setup for PHP development.</p>
+        
+        <div class="site-post__meta" aria-label="About the post" role="doc-introduction">
+            <span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-30T09:32:45+00:00" title="Saturday Mar 30th, 2024, at 9:32am">
+        Mar 30th, 2024
+    </time>
+</span>
+            <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span>By </span>
+            <a href="https://ferox.eti.br" rel="author" itemprop="url">
+            <span itemprop="name">Ferox</span>
+        </a>
+    </span>
+            <span>Filed under Lando</span>
+        </div>
+    </header>
+
+    <div class="site-prose" aria-label="Article body" itemprop="articleBody">
+        <h2>Fixing Traefik and proxy issues</h2>
+<p>Lando is one of the best development tools for PHP developers, but sometimes the Traefik reverse proxy breaks and the project URL stops behaving as expected.</p>
+<p>Start with the basic recovery steps:</p>
+<pre><code class="language-bash">lando poweroff
+lando start
+lando rebuild -y
+</code></pre>
+<p>If that still does not fix the problem, go deeper:</p>
+<pre><code class="language-bash">lando poweroff
+docker rm 64451b59f5ef # the Traefik container ID to be removed
+docker network prune # removes created Docker networks
+
+# use with caution: this can affect networks used by other projects
+# if you run this command, it is often best to remove the ~/.lando directory too
+
+docker destroy -y # removes all containers related to the project
+
+# create a database backup first or you will lose local data
+
+rm -Rf ~/.lando # removes plugins and configuration from the Lando config directory
+
+# sometimes this alone fixes the issue; run lando poweroff first
+
+docker system prune -a # last resort: removes containers, images, and networks system-wide
+
+# on macOS with Apple Silicon, this may be the only option that fixes some cases
+</code></pre>
+<h2>Setting up Xdebug with Lando</h2>
+<p>Xdebug is still essential for PHP development, so here is the setup I use with Lando.</p>
+<p>First, adjust <code>.lando.yml</code>:</p>
+<pre><code class="language-yaml">name: drupal-module-development-book
+recipe: drupal10
+config:
+  webroot: web
+  php: 8.1
+  database: mariadb
+  xdebug: true
+  config:
+    php: scripts/php.ini
+
+services:
+  appserver:
+    overrides:
+      extra_hosts:
+        - &quot;host.docker.internal:host-gateway&quot;
+</code></pre>
+<p>Then create <code>scripts/php.ini</code>:</p>
+<pre><code class="language-ini">[PHP]
+memory_limit = -1
+
+[XDEBUG]
+xdebug.mode=develop,debug,coverage
+xdebug.start_with_request=on
+xdebug.client_port=9003
+xdebug.log_level=0
+xdebug.idekey=PHPSTORM
+xdebug.client_host=host.docker.internal
+xdebug.log=/dev/stdout
+</code></pre>
+<p>This sets the container gateway so Docker can reach the host machine and configures Xdebug 3 to listen on port <code>9003</code> with the <code>PHPSTORM</code> IDE key.</p>
+<p>The next step is enabling requests from the browser. Install the Firefox extension <a href="https://github.com/briangilbert/xdebug-helper-for-firefox">Xdebug helper</a>. If you use Chrome, look for an equivalent extension there.</p>
+<p>After that, configure your IDE or editor to listen for the debugger. In PhpStorm, go to <code>Run -&gt; Edit Configurations...</code>.</p>
+<p><img src="/media/run-debug-configuration-phpstorm.png" alt="Run/Debug Configurations window on PhpStorm IDE" /></p>
+<p>And that is it. Happy hacking.</p>
+
+    </div>
+</article>
+            </div>
+        </section>
+    </main>
+
+
+        <footer class="site-footer" aria-label="Page footer">
+    <div class="mzp-l-content site-footer__inner">
+        <div class="site-footer__grid">
+            <div>
+                <p class="site-footer__label">ferox.eti.br</p>
+                <p class="site-footer__copy">
+                    Fernando Santos. Full Stack development and life on the open web.
+                </p>
+            </div>
+            <div class="site-footer__links">
+                <a href="https://ferox.eti.br/about">About</a>
+                <a href="https://ferox.eti.br/blog">Blog</a>
+                <a href="https://ferox.eti.br/contact">Contact</a>
+                <a href="https://ferox.eti.br/feed.xml">RSS</a>
+                <a href="https://github.com/ferox">GitHub</a>
+                <a href="https://www.linkedin.com/in/ferox">LinkedIn</a>
+                <a href="https://mastodon.pirateparty.be/@ferox">Mastodon</a>
+            </div>
+        </div>
+        <p class="site-footer__legal">
+            &copy; 2026 Ferox. Built with <a href="https://github.com/hydephp/hyde">HydePHP</a>.
+        </p>
+    </div>
+</footer>
+    </div>
+
+    <script type="module" defer src="https://ferox.eti.br/media/app.js?v=fb7aafc5"></script>
+
+
+
+
+</body>
+</html>

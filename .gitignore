@@ -1,10 +1,20 @@
-# Jekyll config files
-*.gem
-.bundle
-.sass-cache
-_site
-.jekyll-cache
-Gemfile.lock
+# HydePHP
+/src/.env
+/src/vendor
+/src/builds
+/src/_site
+/src/.cache
+/src/.phpunit.result.cache
+
+# Node
+/src/node_modules
+
+# Legacy Jekyll workspace
+/old-jekyll/*.gem
+/old-jekyll/.bundle
+/old-jekyll/.sass-cache
+/old-jekyll/.jekyll-cache
+/old-jekyll/_site
 
 # JetBrains config files
 .idea
