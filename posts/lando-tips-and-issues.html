@@ -3,7 +3,78 @@
 <head>
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>ferox - Lando tips and issues</title>
+
+<script>
+    (() => {
+        const storageKey = 'ferox-site-theme';
+        const root = document.documentElement;
+        const darkModeMedia = typeof window.matchMedia === 'function'
+            ? window.matchMedia('(prefers-color-scheme: dark)')
+            : null;
+        const isValidTheme = (value) => ['auto', 'light', 'dark'].includes(value);
+        const resolveTheme = (theme) => theme === 'auto'
+            ? (darkModeMedia?.matches ? 'dark' : 'light')
+            : theme;
+
+        window.__setSiteTheme = (theme) => {
+            const nextTheme = isValidTheme(theme) ? theme : 'auto';
+            const resolvedTheme = resolveTheme(nextTheme);
+
+            root.dataset.theme = nextTheme;
+            root.dataset.themeResolved = resolvedTheme;
+            root.style.colorScheme = resolvedTheme;
+
+            try {
+                window.localStorage.setItem(storageKey, nextTheme);
+            } catch (error) {
+                // Ignore storage failures and keep the in-memory state.
+            }
+
+            if (typeof window.__syncSiteThemeButtons === 'function') {
+                window.__syncSiteThemeButtons(nextTheme);
+            }
+        };
+
+        window.__syncSiteThemeButtons = (theme = root.dataset.theme || 'auto') => {
+            document.querySelectorAll('[data-theme-option]').forEach((option) => {
+                const isActive = option.dataset.themeOption === theme;
+
+                option.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+                option.dataset.active = isActive ? 'true' : 'false';
+            });
+        };
+
+        if (darkModeMedia) {
+            const handleSystemThemeChange = () => {
+                if ((root.dataset.theme || 'auto') === 'auto') {
+                    window.__setSiteTheme('auto');
+                }
+            };
+
+            if (typeof darkModeMedia.addEventListener === 'function') {
+                darkModeMedia.addEventListener('change', handleSystemThemeChange);
+            } else if (typeof darkModeMedia.addListener === 'function') {
+                darkModeMedia.addListener(handleSystemThemeChange);
+            }
+        }
+
+        let initialTheme = 'auto';
+
+        try {
+            const storedTheme = window.localStorage.getItem(storageKey);
+
+            if (isValidTheme(storedTheme)) {
+                initialTheme = storedTheme;
+            }
+        } catch (error) {
+            initialTheme = 'auto';
+        }
+
+        window.__setSiteTheme(initialTheme);
+    })();
+</script>
 
 
 <link rel="canonical" href="https://ferox.eti.br/posts/lando-tips-and-issues">
@@ -28,12 +99,9 @@
 <style>[x-cloak] {display: none!important}</style>
 
 
-            <link rel="stylesheet" href="https://ferox.eti.br/media/app.css?v=bfa0adbf">
-    
-
+            <link rel="stylesheet" href="../media/app.css?v=4ec77c07">
     
     
-
 
 
 
@@ -90,6 +158,26 @@
                         </a>
                     
                     <a href="https://ferox.eti.br/feed.xml" class="site-nav__link site-nav__link--subtle">RSS</a>
+
+                    <div class="site-theme-switcher">
+                        <span class="site-theme-switcher__label" id="site-theme-label">Theme</span>
+                        <div class="site-theme-switcher__options" role="group" aria-labelledby="site-theme-label">
+                            <button type="button" class="site-theme-switcher__option" data-theme-option="auto" aria-pressed="true" onclick="window.__setSiteTheme('auto')">
+                                Auto
+                            </button>
+                            <button type="button" class="site-theme-switcher__option" data-theme-option="light" aria-pressed="false" onclick="window.__setSiteTheme('light')">
+                                Light
+                            </button>
+                            <button type="button" class="site-theme-switcher__option" data-theme-option="dark" aria-pressed="false" onclick="window.__setSiteTheme('dark')">
+                                Dark
+                            </button>
+                        </div>
+                    </div>
+                    <script>
+                        if (typeof window.__syncSiteThemeButtons === 'function') {
+                            window.__syncSiteThemeButtons(document.documentElement.dataset.theme || 'auto');
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -232,7 +320,27 @@ xdebug.log=/dev/stdout
 </footer>
     </div>
 
-    <script type="module" defer src="https://ferox.eti.br/media/app.js?v=fb7aafc5"></script>
+    <script>
+    document.documentElement.classList.add('js');
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const root = document.documentElement;
+        const toggle = document.querySelector('[data-site-menu-toggle]');
+        const menu = document.querySelector('[data-site-menu]');
+
+        if (typeof window.__syncSiteThemeButtons === 'function') {
+            window.__syncSiteThemeButtons(root.dataset.theme || 'auto');
+        }
+
+        if (toggle && menu) {
+            toggle.addEventListener('click', () => {
+                const isOpen = menu.classList.toggle('mzp-is-open');
+                toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                toggle.classList.toggle('mzp-is-active', isOpen);
+            });
+        }
+    });
+</script>
 
 
 

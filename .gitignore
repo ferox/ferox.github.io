@@ -1,4 +1,5 @@
 # HydePHP
+/.github-pages-manifest
 /src/.env
 /src/vendor
 /src/builds

@@ -37,6 +37,26 @@
                     @endforeach
 
                     <a href="{{ Hyde::url('feed.xml') }}" class="site-nav__link site-nav__link--subtle">RSS</a>
+
+                    <div class="site-theme-switcher">
+                        <span class="site-theme-switcher__label" id="site-theme-label">Theme</span>
+                        <div class="site-theme-switcher__options" role="group" aria-labelledby="site-theme-label">
+                            <button type="button" class="site-theme-switcher__option" data-theme-option="auto" aria-pressed="true" onclick="window.__setSiteTheme('auto')">
+                                Auto
+                            </button>
+                            <button type="button" class="site-theme-switcher__option" data-theme-option="light" aria-pressed="false" onclick="window.__setSiteTheme('light')">
+                                Light
+                            </button>
+                            <button type="button" class="site-theme-switcher__option" data-theme-option="dark" aria-pressed="false" onclick="window.__setSiteTheme('dark')">
+                                Dark
+                            </button>
+                        </div>
+                    </div>
+                    <script>
+                        if (typeof window.__syncSiteThemeButtons === 'function') {
+                            window.__syncSiteThemeButtons(document.documentElement.dataset.theme || 'auto');
+                        }
+                    </script>
                 </div>
             </div>
         </div>

@@ -46,6 +46,11 @@
             "@php -r \"@unlink('./app/storage/framework/cache/packages.php');\"",
             "@php hyde package:discover --ansi"
         ],
+        "build:github-pages": [
+            "@php bin/clean-github-pages-output.php",
+            "@php hyde build",
+            "@composer publish:github-pages"
+        ],
         "publish:github-pages": [
             "@php bin/publish-github-pages.php"
         ]
