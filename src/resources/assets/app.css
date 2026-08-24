@@ -600,6 +600,24 @@ a:visited {
     margin-bottom: 0;
 }
 
+.site-language-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.8rem;
+    padding: 0.1rem 0.55rem;
+    border: 1px solid var(--site-border);
+    border-radius: 999px;
+    background: var(--site-surface);
+    color: var(--site-ink);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
 .site-dot {
     width: 5px;
     height: 5px;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ config('hyde.language', 'en') }}" class="mzp-has-sticky-navigation">
+<html lang="{{ \App\Support\PageLanguage::code($page ?? null) }}" class="mzp-has-sticky-navigation">
 <head>
     @include('hyde::layouts.head')
 </head>
